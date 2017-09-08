@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
 
-import 'rxjs/add/observable/from';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +17,7 @@ export class AppComponent implements OnInit {
 
 function doRx() {
   const numbers = [1, 5, 10];
-
-  const source = Observable.from(numbers);
-
+  console.log(numbers);
+  const source = Observable.create(numbers);
 
 }
